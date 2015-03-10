@@ -63,12 +63,12 @@ public class GameState : MonoBehaviour {
 
 		if (random < 75) {
 			enemyClone = (GameObject)Instantiate (enemy_01, enemPosArray [enemySpawn].transform.position, Quaternion.identity);
-			enemyClone.rigidbody.velocity = transform.TransformDirection (enemVArray [enemySpawn] * enemySpeed);
+			enemyClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (enemVArray [enemySpawn] * enemySpeed);
 			Destroy (enemyClone, enemyLifetime);
 		}
 		else if (random >= 75) {
 			enemyClone = (GameObject)Instantiate (enemy_02, enemPosArray [enemySpawn].transform.position, Quaternion.identity);
-			enemyClone.rigidbody.velocity = transform.TransformDirection (enemVArray [enemySpawn] * enemySpeed);
+			enemyClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (enemVArray [enemySpawn] * enemySpeed);
 			Destroy (enemyClone, enemyLifetime);
 		}
 

@@ -92,17 +92,17 @@ public class Secondary_Player_Controller : MonoBehaviour
 				if(Input.GetKey ("right"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleUpLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
 				}
 				else if(Input.GetKey ("left"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleUpRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpRight * bulletSpeed);
 				}
 				else
 				{	
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleUp, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUp * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUp * bulletSpeed);
 				}
 			}
 			else if (Input.GetKey ("up"))
@@ -110,17 +110,17 @@ public class Secondary_Player_Controller : MonoBehaviour
 				if(Input.GetKey ("right"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleDownLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
 				}
 				else if(Input.GetKey ("left"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownRight * bulletSpeed);
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleDown, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDown * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDown * bulletSpeed);
 				}
 			}
 			else if (Input.GetKey ("right"))
@@ -128,17 +128,17 @@ public class Secondary_Player_Controller : MonoBehaviour
 				if(Input.GetKey ("down"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleUpLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
 				}
 				else if(Input.GetKey ("up"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vLeft * bulletSpeed);
 				}
 			}
 			else if (Input.GetKey ("left"))
@@ -146,17 +146,17 @@ public class Secondary_Player_Controller : MonoBehaviour
 				if(Input.GetKey ("down"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleUpRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpRight * bulletSpeed);
 				}
 				else if(Input.GetKey ("up"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownRight * bulletSpeed);
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Secondary_Player_Controller.geminiShip.transform.position, Quaternion.AngleAxis (angleRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vRight * bulletSpeed);
 				}
 			}
 

@@ -142,19 +142,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("left"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleUpLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
 					shootingAngleIndex = angleUpLeft;
 				}
 				else if(Input.GetKey ("right"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleUpRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpRight * bulletSpeed);
 					shootingAngleIndex = angleUpRight;
 				}
 				else
 				{	
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleUp, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUp * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUp * bulletSpeed);
 					shootingAngleIndex = angleUp;
 				}
 			}
@@ -163,19 +163,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("left"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleDownLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
 					shootingAngleIndex = angleDownLeft;
 				}
 				else if(Input.GetKey ("right"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownRight * bulletSpeed);
 					shootingAngleIndex = angleDownRight;
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleDown, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDown * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDown * bulletSpeed);
 					shootingAngleIndex = angleDown;
 				}
 			}
@@ -184,19 +184,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("up"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleUpLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpLeft * bulletSpeed);
 					shootingAngleIndex = angleUpLeft;
 				}
 				else if(Input.GetKey ("down"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownLeft * bulletSpeed);
 					shootingAngleIndex = angleDownLeft;
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleLeft, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vLeft * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vLeft * bulletSpeed);
 					shootingAngleIndex = angleLeft;
 				}
 			}
@@ -205,19 +205,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("up"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleUpRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vUpRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vUpRight * bulletSpeed);
 					shootingAngleIndex = angleUpRight;
 				}
 				else if(Input.GetKey ("down"))
 				{
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleDownRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vDownRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vDownRight * bulletSpeed);
 					shootingAngleIndex = angleDownRight;
 				}
 				else
 				{		
 					bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleRight, Vector3.forward));
-					bulletClone.rigidbody.velocity = transform.TransformDirection (vRight * bulletSpeed);
+					bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vRight * bulletSpeed);
 					shootingAngleIndex = angleRight;
 				}
 			}
@@ -234,19 +234,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("left")){
 					for(int x=3; x<=5; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else if(Input.GetKey ("right")){
 					for(int x=5; x<=7; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else{
 					for(int x=4; x<=6; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 			}
@@ -254,19 +254,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("left")){
 					for(int x=1; x<=3; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else if(Input.GetKey ("right")){
 					for(int x=7; x<=9; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x%8], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
 					}
 				}
 				else{	
 					for(int x=0; x<=2; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 			}
@@ -274,19 +274,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("up")){
 					for(int x=3; x<=5; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else if(Input.GetKey ("down")){
 					for(int x=1; x<=3; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else{		
 					for(int x=2; x<=4; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 			}
@@ -294,19 +294,19 @@ public static int[] 	angleArray 	= new int[8];
 				if(Input.GetKey ("up")){
 					for(int x=5; x<=7; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x] * bulletSpeed);
 					}
 				}
 				else if(Input.GetKey ("down")){
 					for(int x=7; x<=9; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x%8], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
 					}
 				}
 				else{	
 					for(int x=6; x<=8; x++){
 						bulletClone = (GameObject)Instantiate (bullet, Player_Controller.player.transform.position, Quaternion.AngleAxis (angleArray[x%8], Vector3.forward));
-						bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
+						bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[x%8] * bulletSpeed);
 					}
 				}
 			}
@@ -327,7 +327,7 @@ void SuperShot(){
 			for(int y=0; y<8; y++)
 			{
 				bulletClone = (GameObject) Instantiate (bullet, posArray[x].transform.position, Quaternion.AngleAxis (angleArray[y], Vector3.forward));
-				bulletClone.rigidbody.velocity = transform.TransformDirection (vArray[y] * bulletSpeed);
+				bulletClone.GetComponent<Rigidbody>().velocity = transform.TransformDirection (vArray[y] * bulletSpeed);
 				Destroy (bulletClone, bulletLifetime);
 			}
 		}
