@@ -3,15 +3,23 @@ using System.Collections;
 
 public class Bullet_Controller : MonoBehaviour {
 
-	void OnTriggerEnter(Collider collider){
-		if (collider.gameObject.tag == "Enemy_01") {
-			Destroy (collider.gameObject);
-			Player_Controller.score++;	
-		}
+  //public static Rigidbody rb;
+  //private Player_Controller player;
 
-		else if (collider.gameObject.tag == "Enemy_02" && Enemy02_Controller.health <= 0) {
-			Destroy (collider.gameObject);
-			Player_Controller.score++;
-		}
-	}
+  void Start()
+  {
+   // rb = this.GetComponent<Rigidbody>();
+   // player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
+
+  }
+
+  void ApplyForce(Vector3 v, float speed)
+  {
+   // rb.AddForce(v * speed);
+  }
+
+	void OnTriggerEnter(Collider collider)
+  {
+
+  }
 }
