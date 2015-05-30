@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\..\Creative Cloud Files\Giant Shoulder Productions\Torn Apart\Unity Folder\Assets\Player_Control.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\New Unity Project\Assets\Movement.cs">
     <Files>
-      <File FileName="..\..\..\..\..\Creative Cloud Files\Giant Shoulder Productions\Torn Apart\Unity Folder\Assets\Player_Control.cs" Line="13" Column="44" />
-      <File FileName="..\..\..\..\..\Creative Cloud Files\Giant Shoulder Productions\Torn Apart\Unity Folder\Assets\TouchInput.cs" Line="47" Column="6" />
+      <File FileName="..\..\..\New Unity Project\Assets\Movement.cs" Line="5" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
