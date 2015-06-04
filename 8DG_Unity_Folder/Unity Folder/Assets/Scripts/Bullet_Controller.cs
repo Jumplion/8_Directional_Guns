@@ -3,19 +3,16 @@ using System.Collections;
 
 public class Bullet_Controller : MonoBehaviour {
 
-  //public static Rigidbody rb;
-  //private Player_Controller player;
+  public float speed;
 
   void Start()
   {
-   // rb = this.GetComponent<Rigidbody>();
-   // player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Controller>();
 
   }
 
-  void ApplyForce(Vector3 v, float speed)
+  void Update()
   {
-   // rb.AddForce(v * speed);
+    transform.Translate(Vector3.up * speed * Time.deltaTime);
   }
 
 	void OnTriggerEnter(Collider collider)

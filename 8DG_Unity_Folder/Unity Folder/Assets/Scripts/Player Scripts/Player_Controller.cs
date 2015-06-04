@@ -58,8 +58,6 @@ public class Player_Controller : MonoBehaviour
   public static int[] 	  weaponArray = new int[8];     // Array for weapons
   #endregion
   private Rigidbody rb;
-
-  public Texture flash;
   #endregion
 	
   void Awake() {
@@ -94,14 +92,6 @@ public class Player_Controller : MonoBehaviour
     playerPos = transform.position;
     playerRot = transform.rotation;
 
-
-
-    /*
-    if (Input.GetKeyDown ("q"))
-      if(superShotLimit > 0)
-        SuperShot ();
-    */
-
 	}
 
   void OnGUI()
@@ -111,11 +101,8 @@ public class Player_Controller : MonoBehaviour
     GUI.Label(new Rect(25, 20, 400, 25), "Current Aiming Angle: " + angleArray[shootingAngleIndex]);
     GUI.Label(new Rect(25, 30, 400, 25), "Shooting Angle Index: " + shootingAngleIndex);
     GUI.Label(new Rect(25, 40, 400, 25), "Health: " + health);
+    GUI.Label(new Rect(25, 50, 400, 25), "" + (shootingAngleIndex-1) % 8);
 
-    if (Input.GetKeyDown("f"))
-    {
-      GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), flash);
-    }
   }
 
   #region Player Movement
@@ -257,12 +244,10 @@ public class Player_Controller : MonoBehaviour
     {
 
       bulletClone = (GameObject)Instantiate(bullet, playerPos, playerRot);
+      Destroy(bulletClone, bulletLifetime);
 
-      bulletClone.GetComponent<Rigidbody>().AddForce(vArray[shootingAngleIndex] * bulletSpeed);
-      
       rb.AddForce(vArray[GetOppositeDirection(shootingAngleIndex)] * knockBack);
 
-      Destroy(bulletClone, bulletLifetime);
       deltaROF = bulletROF;
     }
   }
@@ -275,25 +260,22 @@ public class Player_Controller : MonoBehaviour
     {
       DefaultShoot();
 
-      Quaternion quat = playerRot;
-      quat.z += 45.0f;
+      int leftBullet = (shootingAngleIndex + 8) % 8;
+      int rightBullet = (shootingAngleIndex + 1) % 8;
+
+      Debug.Log(leftBullet);
+
+      Quaternion quat = Quaternion.AngleAxis(angleArray[rightBullet], Vector3.forward);
 
       bulletClone = (GameObject)Instantiate(bullet, playerPos, quat);
-      bulletClone.GetComponent<Rigidbody>().AddForce(vArray[(shootingAngleIndex + 1) % 8] * bulletSpeed);
       Destroy(bulletClone, bulletLifetime);
 
-      quat.z -= 90.0f;
-      if (shootingAngleIndex == 0)
-      {
-        bulletClone = (GameObject)Instantiate(bullet, playerPos, quat);
-        bulletClone.GetComponent<Rigidbody>().AddForce(vArray[vArray.Length - 1] * bulletSpeed);
-      }
-      else
-      {
-        bulletClone = (GameObject)Instantiate(bullet, playerPos, quat);
-        bulletClone.GetComponent<Rigidbody>().AddForce(vArray[(shootingAngleIndex - 1) % 8] * bulletSpeed);
-      }
+
+      quat = Quaternion.AngleAxis(angleArray[leftBullet], Vector3.forward);
+
+      bulletClone = (GameObject)Instantiate(bullet, playerPos, quat);
       Destroy(bulletClone, bulletLifetime);
+
       deltaROF = bulletROF;
     } 
   }
@@ -303,7 +285,6 @@ public class Player_Controller : MonoBehaviour
 		//defaultShoot ();
 	}
 
-/* Super Shot Code */
   void SuperShot(){
     /*
     for(int x=0; x<8; x++)

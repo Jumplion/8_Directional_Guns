@@ -8,6 +8,7 @@ public class PlayerInput : MonoBehaviour {
   float fireH;
   float fireV;
   bool switchWep;
+  public bool canShoot;
 
   Player_Controller player;
 
@@ -32,8 +33,9 @@ public class PlayerInput : MonoBehaviour {
     player.PlayerPosition(h, v);
     player.PlayerRotate(fireH, fireV);
 
-    if (fireH != 0 || fireV != 0)
-      player.PlayerShoot();
+    if(canShoot)
+      if (fireH != 0 || fireV != 0)
+        player.PlayerShoot();
     
     if(switchWep)
       player.SwitchWeapon();
