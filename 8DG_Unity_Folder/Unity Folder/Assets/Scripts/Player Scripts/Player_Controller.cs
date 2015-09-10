@@ -108,45 +108,7 @@ public class Player_Controller : MonoBehaviour
   #region Player Movement
   public void PlayerPosition(float h, float v)
   {
-    //Checks if the player has pressed the WASD keys and any two combinations.
-    // Up
-    if (v == 1)
-    {
-      // Right
-      if (h == 1)
-        playerPosIndex = UPRIGHT;
-      // Left
-      else if (h == -1)
-        playerPosIndex = UPLEFT;
-      // Pure
-      else
-        playerPosIndex = UP;
-    }
-
-    // Down
-    else if (v == -1)
-    {
-      // Right
-      if (h == 1)
-        playerPosIndex = DOWNRIGHT;
-      // Left
-      else if (h == -1)
-        playerPosIndex = DOWNLEFT;
-      // Pure
-      else
-        playerPosIndex = DOWN;
-    }
-
-    // Pure Left or Right
-    else
-    {
-      // Right
-      if (h == 1)
-        playerPosIndex = RIGHT;
-      // Left
-      else if (h == -1)
-        playerPosIndex = LEFT;
-    }
+    playerPosIndex = FindIndex(h, v, playerPosIndex);
 
     // Lerp between position and destination
     //transform.position = Vector3.Lerp(transform.position, posArray[playerPosIndex], Time.deltaTime * playerSpeed);
@@ -157,50 +119,54 @@ public class Player_Controller : MonoBehaviour
 
   public void PlayerRotate(float h, float v)
   {
+    shootingAngleIndex = FindIndex(h, v, shootingAngleIndex);
+
+    Quaternion rotateTo = Quaternion.AngleAxis(angleArray[shootingAngleIndex], Vector3.forward);
+    transform.rotation = Quaternion.Lerp(playerRot, rotateTo, deltaTurnRate);
+  }
+  #endregion
+
+  private int FindIndex(float h, float v, int index)
+  {
     // Up
     if (v == 1)
     {
       // Right
       if (h == 1)
-        shootingAngleIndex = UPRIGHT;
+        index = UPRIGHT;
       // Left
       else if (h == -1)
-        shootingAngleIndex = UPLEFT;
+        index = UPLEFT;
       // Pure
       else
-        shootingAngleIndex = UP;
+        index = UP;
     }
     // Down
     else if (v == -1)
     {
       // Right
       if (h == 1)
-        shootingAngleIndex = DOWNRIGHT;
+        index = DOWNRIGHT;
       // Left
       else if (h == -1)
-        shootingAngleIndex = DOWNLEFT;
+        index = DOWNLEFT;
       // Pure
       else
-        shootingAngleIndex = DOWN;
+        index = DOWN;
     }
     // Pure
     else
     {
       // Right
       if (h == 1)
-        shootingAngleIndex = RIGHT;
+        index = RIGHT;
       // Left
       else if (h == -1)
-        shootingAngleIndex = LEFT;
+        index = LEFT;
     }
 
-    Quaternion rotateTo = Quaternion.AngleAxis(angleArray[shootingAngleIndex], Vector3.forward);
-    transform.rotation = Quaternion.Lerp(playerRot, rotateTo, deltaTurnRate);
-
-    //rb.AddTorque();
-    //rb.AddForce((posArray[playerPosIndex].transform.position - playerPos) * playerSpeed);
+    return index;
   }
-  #endregion
 
   #region Shooting Functions
   public void PlayerShoot()

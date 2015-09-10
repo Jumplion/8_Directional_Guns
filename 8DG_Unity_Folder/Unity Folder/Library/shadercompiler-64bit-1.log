@@ -1,5 +1,5 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-1019324
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-27088
 Cmd: getPlatforms
 Cmd: compileSnippet
   api=1 type=0 insize=541 outsize=832 kw=SHADOWS_DEPTH ok=1
@@ -14,6 +14,38 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=1 type=1 insize=3647 outsize=223 kw=DIRECTIONAL ok=1
 Cmd: compileSnippet
-  api=1 type=0 insize=1051 outsize=240 kw= ok=1
+  api=1 type=0 insize=7523 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
 Cmd: compileSnippet
-  api=1 type=1 insize=1051 outsize=159 kw= ok=1
+  api=1 type=1 insize=7523 outsize=974 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=4918 outsize=819 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=4918 outsize=834 kw=DIRECTIONAL ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=1004 outsize=1118 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=1004 outsize=135 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=631 outsize=1985 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=631 outsize=133 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=794 outsize=1087 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=794 outsize=61 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=619 outsize=1916 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=619 outsize=133 kw= ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=751 outsize=814 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=751 outsize=65 kw=SHADOWS_DEPTH ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=982 outsize=842 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=982 outsize=3721 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=0 insize=938 outsize=808 kw=DIRECTIONAL SHADOWS_OFF ok=1
+Cmd: compileSnippet
+  api=1 type=1 insize=938 outsize=2070 kw=DIRECTIONAL SHADOWS_OFF ok=1
